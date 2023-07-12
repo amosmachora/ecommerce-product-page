@@ -1,0 +1,247 @@
+.App {
+  width: 90%;
+  margin: 0 auto;
+}
+.body {
+  padding: 30px 100px;
+}
+.body-left,
+.body-right {
+  width: 50%;
+}
+
+.body-left > img {
+  width: 80%;
+  border-radius: 20px;
+  height: 410px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.thumbnails {
+  width: 80%;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.thumbnails > img {
+  width: 21%;
+  object-fit: cover;
+  height: 80px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.thumbnails > .image1.image1-active,
+.thumbnails > .image2.image2-active,
+.thumbnails > .image3.image3-active,
+.thumbnails > .image4.image4-active {
+  border: 2px solid var(--orange);
+  transition: border, opacity 200ms ease-in;
+  opacity: 0.3;
+}
+.thumbnails > .image1-two.image1-two-active,
+.thumbnails > .image2-two.image2-two-active,
+.thumbnails > .image3-two.image3-two-active,
+.thumbnails > .image4-two.image4-two-active {
+  border: 2px solid var(--orange);
+  transition: border, opacity 200ms ease-in;
+  opacity: 0.3;
+}
+.thumbnails > img:hover {
+  transition: border, opacity 200ms ease-in;
+  opacity: 0.6;
+}
+
+.body-right {
+  padding: 50px 0px;
+}
+h3 {
+  font-size: calc(1rem - 4px);
+  color: var(--orange);
+  letter-spacing: 2px;
+}
+.body-right > p:first-of-type {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.body-right > p:nth-child(3) {
+  color: var(--darkGrayishBlue);
+  font-size: calc(1rem - 2px);
+  width: 45ch;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.body-right > div {
+  align-items: center;
+}
+.body-right > div:first-of-type > p:first-child {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.body-right > div:first-of-type > p:last-child {
+  margin-left: 10px;
+  background-color: var(--paleOrange);
+  color: var(--orange);
+  padding: 0px 5px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 4px;
+  font-size: calc(1rem - 2px);
+}
+.two-fifty {
+  font-size: calc(1rem - 2px);
+  font-weight: 700;
+  color: var(--grayishBlue);
+  margin-top: 5px;
+  text-decoration: line-through;
+}
+
+.left-bottom {
+  margin-top: 50px;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.plus-minus-icons {
+  align-items: center;
+  background-color: lightgray;
+  border-radius: 10px;
+  width: 35%;
+  padding: 15px 20px;
+  justify-content: space-between;
+}
+.plus-minus-icons > p {
+  font-weight: 700;
+  font-size: calc(1rem - 2px);
+}
+.plus-minus-icons > img {
+  cursor: pointer;
+}
+.add-to-cart {
+  border-radius: 10px;
+  width: 60%;
+  background-color: var(--orange);
+  padding: 15px 20px;
+  color: var(--white);
+  cursor: pointer;
+}
+.add-to-cart > div {
+  margin: 0 auto;
+}
+.cart-icon {
+  margin-right: 10px;
+  height: 15px;
+  width: 15px;
+}
+.add-to-cart-text {
+  font-size: calc(1rem - 4px);
+}
+.overlay {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.body-left.true {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  z-index: 2;
+}
+.body-left.true > img {
+  width: 100%;
+}
+.body-left.true > .thumbnails {
+  width: 100%;
+}
+.thumbnails.overlay-thumbnails {
+  justify-content: space-around;
+}
+.body-left.true > img:first-child {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+  position: absolute;
+  top: -7%;
+  right: 0%;
+}
+.svg_container {
+  align-items: center;
+  background-color: var(--white);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.svg_container:hover path {
+  stroke: var(--orange);
+}
+.body-left-wrapper {
+  position: relative;
+  height: 100vh;
+}
+.pointer-left {
+  position: absolute;
+  top: 40%;
+  left: -6%;
+}
+.pointer-right {
+  position: absolute;
+  top: 40%;
+  right: -6%;
+}
+
+@media screen and (max-width: 1150px) {
+  .App {
+    width: 97%;
+  }
+  .body {
+    padding: 30px 20px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .body {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+  .body-left {
+    width: 100%;
+  }
+  .body-left > * {
+    margin: 0 auto;
+  }
+  .body-left > img {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .body-right {
+    width: 100%;
+  }
+  .left-bottom {
+    flex-direction: column;
+    margin: 30px auto;
+  }
+  .plus-minus-icons {
+    width: 100%;
+  }
+  .add-to-cart {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .body-right > p:nth-child(3) {
+    font-size: 1rem;
+    width: unset;
+  }
+  .body-left.true {
+    width: 80%;
+  }
+}
